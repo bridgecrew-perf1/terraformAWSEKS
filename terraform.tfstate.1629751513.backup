@@ -1,0 +1,48 @@
+{
+  "version": 4,
+  "terraform_version": "0.14.3",
+  "serial": 234,
+  "lineage": "f867373f-3ef3-30d7-8e67-d7747a68c05d",
+  "outputs": {},
+  "resources": [
+    {
+      "module": "module.eks",
+      "mode": "managed",
+      "type": "kubernetes_config_map",
+      "name": "aws_auth",
+      "provider": "provider[\"registry.terraform.io/hashicorp/kubernetes\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "binary_data": null,
+            "data": {
+              "mapAccounts": "[]\n",
+              "mapRoles": "- \"groups\":\n  - \"system:bootstrappers\"\n  - \"system:nodes\"\n  \"rolearn\": \"arn:aws:iam::017653256590:role/k8sTEST-k8sTEST-eks-ckMLZUBi2021082319360575360000000c\"\n  \"username\": \"system:node:{{EC2PrivateDNSName}}\"\n",
+              "mapUsers": "[]\n"
+            },
+            "id": "kube-system/aws-auth",
+            "metadata": [
+              {
+                "annotations": null,
+                "generate_name": "",
+                "generation": 0,
+                "labels": {
+                  "app.kubernetes.io/managed-by": "Terraform",
+                  "terraform.io/module": "terraform-aws-modules.eks.aws"
+                },
+                "name": "aws-auth",
+                "namespace": "kube-system",
+                "resource_version": "713",
+                "self_link": "/api/v1/namespaces/kube-system/configmaps/aws-auth",
+                "uid": "6f36e6bf-0f51-4b2f-9cfd-a8ed9ceb69b1"
+              }
+            ]
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    }
+  ]
+}
